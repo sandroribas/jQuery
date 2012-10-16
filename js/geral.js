@@ -5,6 +5,8 @@ var $j = jQuery.noConflict();
 //});
 
 $j(document).ready(function(){
-	
+	$j('#btn-vermelha').click(function(){
+		$j('#cor')	.css('color', '#00CC33');
+	});
 
 });
