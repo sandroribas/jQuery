@@ -7,6 +7,9 @@ body {
   width: 100%;
   background: #333;
 }
+.nova-classe {
+  opacity: 0;
+}
 a {
   font-size: 18px;
   font-family: Tahoma, Geneva, sans-serif;
@@ -20,7 +23,7 @@ a {
   float: left;
   padding: 0px;
   text-align: center;
-  margin: 10px 10px 10px 10px;
+  margin: 25px 10px 10px 10px;
 }
 .botao a {
   background: #990;
@@ -50,4 +53,22 @@ h5,
 h6 {
   color: #9C0;
   margin: 10px 0px 10px 10px;
+}
+p {
+  margin: 10px 0px 10px 10px;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 14px;
+  color: #990;
+}
+ul.teste {
+  width: 80px;
+  border: 1px solid #333;
+  padding: 10px 50px;
+  background: #ffffff;
+}
+li.mudar {
+  color: #f00;
+  background: #333;
+  list-style: none;
+  margin: 3px 0;
 }
