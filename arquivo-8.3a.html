@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css" media="all">
+body {
+	width:700px;	
+	font: 80%/1.2 Arial, Helvetica, sans-serif;
+	margin:20px auto;
+	padding:10px 20px;
+	border:1px solid #ccc;
+	}
+div {
+	width:200px;
+	height:150px;
+	background:#c30;
+	border:2px solid #600;
+	cursor:pointer;
+	}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(function() {
+			$('div').toggle (
+				function(event) {
+				$(event.target).css('opacity', 0.2);
+				},
+				function(event) {
+				$(event.target).css('opacity', 1);
+				}
+			);
+		});
+	});
+</script>
+</head>
+
+<body>
+<div>Clique-me!</div> 
+</body>
+</html>

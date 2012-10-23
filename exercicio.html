@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Animate</title>
+<style type="text/css">
+body {
+	width:700px;	
+	font: 80%/1.2 Arial, Helvetica, sans-serif;
+	margin:0 auto;
+	}
+label {color:#c30;}
+p {background:#444;color:#fff;}
+button {font-size:0.9em;}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript">
+var $j = jQuery.noConflict();
+	$j(document).ready(function() {
+		$j('html').css('height','101%');
+		$j('h1').after('<button type="button">Esconder</button>');
+			var emAndamento = '<img src="imgs/328.gif" class="gif-andamento" />';
+			var alturaJanela = $j(window).height();
+			var alturaObjeto = $j('p').outerHeight();
+			var posicaoObjeto = $j('p').position().top;
+			var amplitudeDeslocamento = alturaJanela - alturaObjeto - posicaoObjeto;
+		$j('button').click(function() {
+			if ($j(this).text() == 'Mostrar') { 
+				$j(this).text('Esconder').hide().after(emAndamento);				
+				$j('p').show()
+				.animate({top: 0, opacity: 1}, 2500, function() {
+					$j('.gif-andamento').css('display', 'none');
+					$j('button').show();
+					}
+				);
+			} else {
+				$j(this).text('Mostrar').hide().after(emAndamento);
+				$j('p').css({position: 'relative'})
+					.animate({top: amplitudeDeslocamento, opacity: 0}, 2500, function(){
+					$j('p').hide();			
+					$j('.gif-andamento').css('display', 'none');
+					$('button').show();
+					}
+				);
+			};
+		});
+	});
+</script>
+</head>
+
+<body>
+<h1>Folhas de estilo em cascata</h1>
+<p>A grande vantagem do uso de CSS é a de separar a marcação HTML, da apresentação do site. Em outras palavras, vale dizer que o HTML destina-se unicamente a estruturar e marcar o conteúdo, ficando por conta das CSS toda a responsabilidade pelo visual do documento.</p>
+</body>
+</html>
